@@ -1,8 +1,10 @@
 package pairmatching.domain;
 
+import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 import static org.assertj.core.api.AssertionsForClassTypes.assertThatCode;
 import static org.assertj.core.api.AssertionsForClassTypes.assertThatThrownBy;
 
+import java.util.List;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
@@ -28,5 +30,18 @@ public class LevelTest {
         assertThatThrownBy(() -> Level.from(input))
                 .isInstanceOf(IllegalArgumentException.class)
                 .hasMessageContaining("[ERROR]");
+    }
+
+    @DisplayName("레벨에 해당하는 미션 목록 반환")
+    @Test
+    void 레벨에_해당하는_미션_목록_반환() {
+        //given
+        Level level = Level.LEVEL1;
+
+        //when
+        List<String> result = level.getMissions();
+
+        //then
+        assertThat(result).isEqualTo(List.of("자동차경주", "로또", "숫자야구게임"));
     }
 }
