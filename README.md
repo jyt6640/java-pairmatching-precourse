@@ -119,7 +119,7 @@ List<String> shuffledCrew = Randoms.shuffle(crewNames); // 섞인 크루 이름 
 - [X] 문자열로 Level enum 찾는 정적 팩토리 메서드
 - [X] 입력값이 다를 경우 예외 발생
 - [X] Level에 해당하는 미션 목록 반환
-- [ ] 해당 레벨에 존재하지 않는 미션 검증
+- [X] 해당 레벨에 존재하지 않는 미션 검증
 
 #### 페어(Pair)
 - [ ] 2명 또는 3명의 크루를 가진 Pair 객체 생성

@@ -29,4 +29,8 @@ public enum Level {
     public List<String> getMissions() {
         return missions;
     }
+
+    public boolean hasMission(String mission) {
+        return missions.contains(mission);
+    }
 }
