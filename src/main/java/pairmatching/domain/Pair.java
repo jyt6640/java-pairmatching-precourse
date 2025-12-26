@@ -26,4 +26,9 @@ public class Pair {
     public int size() {
         return crewNames.size();
     }
+
+    @Override
+    public String toString() {
+        return String.join(" : ", crewNames);
+    }
 }
