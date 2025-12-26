@@ -19,6 +19,6 @@ public enum Level {
                 return level;
             }
         }
-        throw new IllegalArgumentException("[ERROR] 유효하지 않은 레벨입니다.");
+        throw new IllegalArgumentException("[ERROR] 유효하지 않은 입력값입니다.");
     }
 }
