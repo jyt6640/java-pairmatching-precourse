@@ -13,6 +13,17 @@ public class Pair {
     }
 
     public void addCrew(String crew) {
+        validateSize(crewNames);
         crewNames.add(crew);
+    }
+
+    private void validateSize(List<String> crewNames) {
+        if (crewNames.size() >= 3) {
+            throw new IllegalArgumentException("[ERROR] 페어는 4명 이상일 수 없습니다.");
+        }
+    }
+
+    public int size() {
+        return crewNames.size();
     }
 }
