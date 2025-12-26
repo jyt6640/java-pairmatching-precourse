@@ -121,7 +121,7 @@ List<String> shuffledCrew = Randoms.shuffle(crewNames); // 섞인 크루 이름 
 - [X] 해당 레벨에 존재하지 않는 미션 검증
 
 #### 페어(Pair)
-- [ ] 2명 또는 3명의 크루를 가진 Pair 객체 생성
+- [X] 2명 또는 3명의 크루를 가진 Pair 객체 생성
 - [ ] 페어에 크루 추가
 - [ ] 페어 내 크루 목록 반환
 
