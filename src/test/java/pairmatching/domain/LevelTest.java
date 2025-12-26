@@ -8,6 +8,7 @@ import java.util.List;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.CsvSource;
 import org.junit.jupiter.params.provider.ValueSource;
 
 public class LevelTest {
@@ -43,5 +44,18 @@ public class LevelTest {
 
         //then
         assertThat(result).isEqualTo(List.of("자동차경주", "로또", "숫자야구게임"));
+    }
+
+    @DisplayName("해당 레벨에 존재하는 미션인지 확인")
+    @CsvSource({
+            "LEVEL1, 자동차경주",
+            "LEVEL1, 로또",
+            "LEVEL2, 장바구니",
+            "LEVEL4, 성능개선"
+    })
+    @ParameterizedTest
+    void 해당_레벨에_존재하는_미션인지_확인(Level level, String missionName) {
+        //when&than
+        assertThat(level.hasMission(missionName)).isTrue();
     }
 }
