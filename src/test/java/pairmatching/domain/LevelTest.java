@@ -16,7 +16,7 @@ public class LevelTest {
     @ValueSource(strings = {"레벨1", "레벨2", "레벨3", "레벨4", "레벨5"})
     @ParameterizedTest
     void 레벨_enum_생성(String input) {
-        //when&than
+        //when&then
         assertThatCode(() -> Level.from(input))
                 .doesNotThrowAnyException();
     }
@@ -27,7 +27,7 @@ public class LevelTest {
         //given
         String input = "레벨6";
 
-        //when&than
+        //when&then
         assertThatThrownBy(() -> Level.from(input))
                 .isInstanceOf(IllegalArgumentException.class)
                 .hasMessageContaining("[ERROR]");
@@ -55,7 +55,7 @@ public class LevelTest {
     })
     @ParameterizedTest
     void 해당_레벨에_존재하는_미션인지_확인(Level level, String missionName) {
-        //when&than
+        //when&then
         assertThat(level.hasMission(missionName)).isTrue();
     }
 }

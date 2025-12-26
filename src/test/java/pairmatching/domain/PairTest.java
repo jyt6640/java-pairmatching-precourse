@@ -16,7 +16,7 @@ public class PairTest {
         String input1 = "용태";
         String input2 = "수미";
 
-        //when&than
+        //when&then
         assertThatCode(() -> new Pair(input1, input2))
                 .doesNotThrowAnyException();
     }
@@ -30,7 +30,7 @@ public class PairTest {
         //when
         Pair result = new Pair("용태", "수미");
 
-        //than
+        //then
         assertThatCode(() -> result.addCrew(input))
                 .doesNotThrowAnyException();
     }
@@ -46,7 +46,7 @@ public class PairTest {
         Pair result = new Pair("용태", "수미");
         result.addCrew(input1);
 
-        //than
+        //then
         assertThatThrownBy(() -> result.addCrew(input2))
                 .isInstanceOf(IllegalArgumentException.class)
                 .hasMessageContaining("[ERROR]");
@@ -62,7 +62,7 @@ public class PairTest {
         //when
         String result = pair.toString();
 
-        //than
+        //then
         assertThat(result).isEqualTo("용태 : 수미 : 희태");
     }
 }

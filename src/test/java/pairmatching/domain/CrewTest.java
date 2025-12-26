@@ -19,7 +19,7 @@ public class CrewTest {
         input.add("용태");
         input.add("수미");
 
-        //when&than
+        //when&then
         assertThatCode(() -> new Crew(course, input))
                 .doesNotThrowAnyException();
     }

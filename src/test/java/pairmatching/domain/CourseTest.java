@@ -24,7 +24,7 @@ public class CourseTest {
         //given
         String input = "모바일";
 
-        //when&than
+        //when&then
         assertThatThrownBy(() -> Course.from(input))
                 .isInstanceOf(IllegalArgumentException.class)
                 .hasMessageContaining("[ERROR]");
