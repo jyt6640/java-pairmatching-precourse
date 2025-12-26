@@ -132,7 +132,7 @@ List<String> shuffledCrew = Randoms.shuffle(crewNames); // 섞인 크루 이름 
 
 #### 매칭 이력(MatchingHistory)
 - [X] 레벨별 매칭된 페어 조합 저장
-- [ ] 같은 레벨에서 이미 매칭된 조합인지 확인
+- [X] 같은 레벨에서 이미 매칭된 조합인지 확인
 - [ ] 특정 레벨의 매칭 이력 반환
 - [ ] 전체 매칭 이력 초기화
 
