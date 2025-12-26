@@ -1,6 +1,7 @@
 package pairmatching.domain;
 
 import static org.assertj.core.api.AssertionsForClassTypes.assertThatCode;
+import static org.assertj.core.api.AssertionsForClassTypes.assertThatThrownBy;
 
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -31,5 +32,22 @@ public class PairTest {
         //than
         assertThatCode(() -> result.addCrew(input))
                 .doesNotThrowAnyException();
+    }
+
+    @DisplayName("크루를 추가할 때 사이즈가 3이 넘을 경우 예외 발생")
+    @Test
+    void 크루를_추가할_때_사이즈가_3이_넘을_경우_예외_발생() {
+        //given
+        String input1 = "지현";
+        String input2 = "희태";
+
+        //when
+        Pair result = new Pair("용태", "수미");
+        result.addCrew(input1);
+
+        //than
+        assertThatThrownBy(() -> result.addCrew(input2))
+                .isInstanceOf(IllegalArgumentException.class)
+                .hasMessageContaining("[ERROR]");
     }
 }
