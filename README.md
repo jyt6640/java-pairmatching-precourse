@@ -122,7 +122,7 @@ List<String> shuffledCrew = Randoms.shuffle(crewNames); // 섞인 크루 이름 
 
 #### 페어(Pair)
 - [X] 2명 또는 3명의 크루를 가진 Pair 객체 생성
-- [ ] 페어에 크루 추가
+- [X] 페어에 크루 추가
 - [ ] 페어 내 크루 목록 반환
 
 #### 페어 매칭 결과(PairMatchingResult)

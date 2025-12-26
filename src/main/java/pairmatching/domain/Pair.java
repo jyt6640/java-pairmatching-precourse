@@ -11,4 +11,8 @@ public class Pair {
         this.crewNames.add(crew1);
         this.crewNames.add(crew2);
     }
+
+    public void addCrew(String crew) {
+        crewNames.add(crew);
+    }
 }
