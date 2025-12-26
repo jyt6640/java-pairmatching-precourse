@@ -13,12 +13,14 @@ public class CrewTest {
     @Test
     void 배열로_Crew_객체_생성() {
         //given
+        Course course = Course.from("백엔드");
+
         List<String> input = new ArrayList<>();
         input.add("용태");
         input.add("수미");
 
         //when&than
-        assertThatCode(() -> new Crew(input))
+        assertThatCode(() -> new Crew(course, input))
                 .doesNotThrowAnyException();
     }
 }
