@@ -126,9 +126,9 @@ List<String> shuffledCrew = Randoms.shuffle(crewNames); // 섞인 크루 이름 
 - [X] 페어 내 크루 목록 반환
 
 #### 페어 매칭 결과(PairMatchingResult)
-- [ ] Course, Level, Mission 정보를 가진 매칭 결과 객체 생성
-- [ ] 페어 목록 저장
-- [ ] 매칭 정보 조회 (Course, Level, Mission으로)
+- [X] Course, Level, Mission 정보를 가진 매칭 결과 객체 생성
+- [X] 페어 목록 저장
+- [X] 매칭 정보 조회 (Course, Level, Mission으로)
 
 #### 매칭 이력(MatchingHistory)
 - [ ] 레벨별 매칭된 페어 조합 저장

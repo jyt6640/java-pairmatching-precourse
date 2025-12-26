@@ -15,4 +15,10 @@ public class PairMatchingResult {
         this.mission = mission;
         this.pairs = pairs;
     }
+
+    public boolean matches(Course course, Level level, String mission) {
+        return this.course.equals(course)
+                && this.level.equals(level)
+                && this.mission.equals(mission);
+    }
 }
