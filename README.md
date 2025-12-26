@@ -89,8 +89,11 @@ List<String> shuffledCrew = Randoms.shuffle(crewNames); // 섞인 크루 이름 
 
 ### 도메인
 #### 크루 멤버
+ - [X] List<String>으로 객체 생성
 
 #### 레벨
+ - [X] 레벨 enum 생성
+ - [ ] 입력값이 다를 경우 예외 발생
 
 #### 미션
 
