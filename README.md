@@ -106,8 +106,7 @@ List<String> shuffledCrew = Randoms.shuffle(crewNames); // 섞인 크루 이름 
 ### 도메인
 
 #### 크루(Crew)
-- [ ] Course, name 필드를 가진 Crew 객체 생성
-- [ ] 크루 이름 중복 검증
+- [X] Course, name 필드를 가진 Crew 객체 생성
 
 #### 코스(Course)
 - [X] 코스 enum 생성 (BACKEND, FRONTEND)
