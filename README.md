@@ -118,14 +118,7 @@ List<String> shuffledCrew = Randoms.shuffle(crewNames); // 섞인 크루 이름 
 - [X] 레벨 enum 생성 (LEVEL1~5)
 - [X] 문자열로 Level enum 찾는 정적 팩토리 메서드
 - [X] 입력값이 다를 경우 예외 발생
-
-#### 미션(Mission)
-- [ ] 미션 이름을 가진 Mission 객체 생성
-- [ ] 미션 이름으로 Mission 찾기
-
-#### 레벨 별 미션(Levels)
-- [ ] Level과 Mission으로 객체 생성
-- [ ] Level에 해당하는 미션 목록 반환
+- [X] Level에 해당하는 미션 목록 반환
 - [ ] 해당 레벨에 존재하지 않는 미션 검증
 
 #### 페어(Pair)
