@@ -18,4 +18,18 @@ public class PairTest {
         assertThatCode(() -> new Pair(input1, input2))
                 .doesNotThrowAnyException();
     }
+
+    @DisplayName("페어 리스트에 크루 추가 기능")
+    @Test
+    void 페어_리스트에_크루_추가_기능() {
+        //given
+        String input = "지현";
+
+        //when
+        Pair result = new Pair("용태", "수미");
+
+        //than
+        assertThatCode(() -> result.addCrew(input))
+                .doesNotThrowAnyException();
+    }
 }
