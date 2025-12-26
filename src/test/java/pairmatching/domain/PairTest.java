@@ -1,5 +1,6 @@
 package pairmatching.domain;
 
+import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 import static org.assertj.core.api.AssertionsForClassTypes.assertThatCode;
 import static org.assertj.core.api.AssertionsForClassTypes.assertThatThrownBy;
 
@@ -49,5 +50,19 @@ public class PairTest {
         assertThatThrownBy(() -> result.addCrew(input2))
                 .isInstanceOf(IllegalArgumentException.class)
                 .hasMessageContaining("[ERROR]");
+    }
+
+    @DisplayName("페어를 문자열로 변환")
+    @Test
+    void 페어를_문자열로_변환() {
+        //given
+        Pair pair = new Pair("용태", "수미");
+        pair.addCrew("희태");
+
+        //when
+        String result = pair.toString();
+
+        //than
+        assertThat(result).isEqualTo("용태 : 수미 : 희태");
     }
 }
