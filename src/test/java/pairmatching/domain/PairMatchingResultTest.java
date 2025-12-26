@@ -1,5 +1,6 @@
 package pairmatching.domain;
 
+import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 import static org.assertj.core.api.AssertionsForClassTypes.assertThatCode;
 
 import java.util.List;
@@ -23,5 +24,25 @@ public class PairMatchingResultTest {
         //when&then
         assertThatCode(() -> new PairMatchingResult(course, level, mission, pairs))
                 .doesNotThrowAnyException();
+    }
+
+    @DisplayName("코스, 레벨, 미션 정보로 매칭 결과가 있는지 조회")
+    @Test
+    void 코스_레벨_미션_정보로_매칭_결과가_있는지_조회() {
+        //given
+        Course course = Course.BACKEND;
+        Level level = Level.LEVEL1;
+        String mission = "자동차경주";
+        List<Pair> pairs = List.of(
+                new Pair("용태", "수미"),
+                new Pair("지현", "희태")
+        );
+
+        //when
+        PairMatchingResult matchingResult = new PairMatchingResult(course, level, mission, pairs);
+        boolean result = matchingResult.matches(course, level, mission);
+
+        //then
+        assertThat(result).isTrue();
     }
 }
