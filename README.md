@@ -79,6 +79,40 @@ List<String> shuffledCrew = Randoms.shuffle(crewNames); // 섞인 크루 이름 
 ```
 ---
 
+## 상세 기능 구현
+
+### 입/출력
+- [ ] 과정 출력
+- [ ] 미션, 레벨 출력
+- [ ] 매칭 결과 출력
+- [ ] 과정, 레벨, 미션 입력
+
+### 도메인
+#### 크루 멤버
+
+#### 레벨
+
+#### 미션
+
+### 페어 매칭
+- [ ] 페어 매칭이 이미 있는지 확인하기
+- [ ] 과정 기반으로 md 파일 불러오기
+- [ ] shuffle을 통해서 크루 섞기
+- [ ] 두명 씩 매치
+- [ ] 한 사람이 남을 경우 마지막 조에 넣기
+- [ ] 같은 레벨에서 이미 페어로 만난적이 있으면 다시 랜덤으로 섞기
+
+### 페어 조회
+- [ ] 매칭이 있는지 확인
+
+### 페어 초기화
+- [ ] 모두 초기화
+
+### 종료
+- [ ] 종료
+
+---
+
 ## 💾 사전 제공 정보
 - 크루 정보는 src/resources 하위에 md 파일로 제공되며 변경이 가능하다.
 - 과정, 레벨, 미션 정보는 아래에 제공하는 그대로 사용해야 한다.
@@ -374,3 +408,5 @@ public class Crew {
 - **Git의 커밋 단위는 앞 단계에서 README.md 파일에 정리한 기능 목록 단위**로 추가한다.
     - [AngularJS Commit Message Conventions](https://gist.github.com/stephenparish/9941e89d80e2bc58a153) 참고해 commit log를 남긴다.
 - 과제 진행 및 제출 방법은 [프리코스 과제 제출 문서](https://github.com/woowacourse/woowacourse-docs/tree/master/precourse) 를 참고한다.
+
+---
